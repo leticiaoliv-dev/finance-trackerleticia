@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Controle Financeiro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1> 💰Controle Financeiro</h1>
+
+            <h2>Saldo: R$ <span id="balance">0.00</span></h2>
+
+            <form id="form">
+                <input type="text" id="name" placeholder="Nome da transação" required>
+                <input type="number" id="amount" placeholder="Valor" required>
+                <select id="type">
+                    <option value="income">Entrada</option>
+                    <option value="expense">Saída</option>
+                </select>
+                
+                <button>Adicionar</button>
+            </form>
+            
+            <div class="top-bar">
+               <h3>Transações</h3>
+
+               <select id="filter">
+                    <option value="all">Todas</option>
+                    <option value="income">Entradas</option>
+                    <option value="expense">Saídas</option>
+               </select>
+            </div>
+            
+            <ul id="list"></ul>
+            <p id="empty">Nenhuma transação ainda</p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
